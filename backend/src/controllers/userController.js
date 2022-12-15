@@ -61,8 +61,15 @@ const handleEditUser = async (req, res) => {
 };
 
 const getAllCode = async (req, res) => {
-  const data = await userService.getAllCodeService(req.query.type);
-  return res.status(200).json(data);
+  try {
+    const data = await userService.getAllCodeService(req.query.type);
+    return res.status(200).json(data);
+  } catch (error) {
+    return res.status(200).json({
+      errCode: -1,
+      errMessage: "Error from server",
+    });
+  }
 };
 
 module.exports = {

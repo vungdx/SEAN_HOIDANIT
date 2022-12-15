@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import './HomeHeader.scss'
 
@@ -6,6 +6,7 @@ import './HomeHeader.scss'
 class HomeHeader extends Component {
   render() {
     return (
+      <Fragment>
       <div className="home-header-container">
         <div className="home-header-content">
           <div className="left-content">
@@ -46,6 +47,13 @@ class HomeHeader extends Component {
           </div>
         </div>
       </div>
+      <div className="home-header-banner">
+        <div className="title1">NỀN TẢNG Y TÉ</div>
+        <div className="title2">CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
+        <div className="search"></div>
+        <div className="options"></div>
+      </div>
+      </Fragment>
     );
   }
 }

@@ -4,8 +4,8 @@ const getTopDoctorHome = async (req, res) => {
   const limit = req.query.limit;
   if (!limit) limit = 10;
   try {
-    const doctors = await doctorService.getTopDoctorHome(limit);
-    return res.status(200).json(doctors);
+    const response = await doctorService.getTopDoctorHome(limit);
+    return res.status(200).json(response);
   } catch (error) {
     return res.status(200).json({
       errCode: -1,

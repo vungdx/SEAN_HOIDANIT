@@ -54,10 +54,29 @@ const getAllDoctors = (userId) => {
   });
 };
 
-const postInforDoctor = () => {
+const saveDetailInforDoctor = (inputData) => {
   return new Promise(async (resolve, reject) => {
     try {
-    } catch (error) {}
+      if (!inputData.id || inputData.contentHTML || inputData.contentMarkdown) {
+        resolve({
+          errCode: 1,
+          errMessage: "Missing required parameters",
+        });
+      } else {
+        await db.Markdown.create({
+          contentHTML: inputData.contentHTML,
+          contentMarkdown: inputData.contentMarkdown,
+          description: inputData.description,
+          doctorId: inputData.doctorId,
+        });
+        resolve({
+          errCode: 0,
+          errMessage: "successfully",
+        });
+      }
+    } catch (error) {
+      reject(error);
+    }
   });
 };
 
@@ -105,7 +124,6 @@ const getDetailDoctorById = (idInput) => {
 module.exports = {
   getTopDoctorHome,
   getAllDoctors,
-  postInforDoctor,
   saveDetailInforDoctor,
   getDetailDoctorById,
 };

@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import "./HomeHeader.scss";
+import { FormattedMessage } from "react-intl";
 
 class HomeHeader extends Component {
   render() {
@@ -15,13 +16,17 @@ class HomeHeader extends Component {
             <div className="center-content">
               <div className="child-content">
                 <div>
-                  <b>Chuyên khoa</b>
+                  <b>
+                    <FormattedMessage id="homeheader.speciality" />
+                  </b>
                 </div>
                 <div className="subs-title">Tìm bác sỹ theo chuyên khoa</div>
               </div>
               <div className="child-content">
                 <div>
-                  <b>Cơ sở y tế</b>
+                  <b>
+                    <FormattedMessage id="homeheader.health-facility" />
+                  </b>
                 </div>
                 <div className="subs-title">Chọn bệnh viện phòng khám</div>
               </div>
@@ -42,7 +47,8 @@ class HomeHeader extends Component {
               <div className="support">
                 <i className="fas fa-question-circle"></i> Hỗ trợ
               </div>
-              <div className="flag">VN</div>
+              <div className="language-vi">VN</div>
+              <div className="language-en">EN</div>
             </div>
           </div>
         </div>
@@ -80,7 +86,7 @@ class HomeHeader extends Component {
               </div>
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="fas fa-microchip"></i>
+                  <i className="fas fa-flask"></i>
                 </div>
                 <div className="text-child">Xét nghiệm y học</div>
               </div>
@@ -92,7 +98,7 @@ class HomeHeader extends Component {
               </div>
               <div className="option-child">
                 <div className="icon-child">
-                  <i className="fas fa-tooth"></i>
+                  <i className="fas fa-briefcase-medical"></i>
                 </div>
                 <div className="text-child">Khám nha khoa</div>
               </div>
@@ -107,6 +113,7 @@ class HomeHeader extends Component {
 const mapStateToProps = (state) => {
   return {
     isLoggedIn: state.user.isLoggedIn,
+    lang: state.app.language,
   };
 };
 

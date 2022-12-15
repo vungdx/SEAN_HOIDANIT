@@ -1,4 +1,8 @@
 {
+    "homeheader": {
+        "speciality": "Chuyên khoa",
+         "health-facility": "Cơ sở y tế"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",

@@ -1,6 +1,5 @@
 .home-header-container {
   height: 60px;
-  border: 1px solid red;
   width: 100%;
   padding: 0 20px;
 
@@ -46,6 +45,41 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      .support {
+        padding-right: 50px;
+        display: flex;
+        align-items: center;
+
+        i {
+          font-size: 16px;
+        }
+      }
+
+      .language-vi {
+        cursor: pointer;
+
+        &.active {
+          color: orange
+        }
+      }
+
+      .language-vi {
+        cursor: pointer;
+
+        &.active {
+          color: orange
+        }
+      }
+
+      .language-en {
+        cursor: pointer;
+        margin: 0 10px;
+
+        &.active {
+          color: blue
+        }
+      }
     }
   }
 }

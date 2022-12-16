@@ -40,35 +40,31 @@ class Specialty extends Component {
               <Slider {...settings}>
                 <div className="img-customize">
                   <img src={SpecialtyImg1} alt='' />
-                  <div>Tư vấn, trị liệu Tâm lý từ xa</div>
+                  <div>Cơ Xương Khớp</div>
                 </div>
                 <div className="img-customize">
                   <img src={SpecialtyImg2} alt='' />
-                  <div>Sức khỏe tâm thần từ xa</div>
+                  <div>Thần kinh</div>
                 </div>
                 <div className="img-customize">
                   <img src={SpecialtyImg3} alt='' />
-                  <div>Bác sĩ Da liễu từ xa</div>
+                  <div>Tiêu hoá</div>
                 </div>
                 <div className="img-customize">
                   <img src={SpecialtyImg4} alt='' />
-                  <div>Bác sĩ Cơ-Xương-Khớp từ xa</div>
+                  <div>Tim mạch</div>
                 </div>
                 <div className="img-customize">
                   <img src={SpecialtyImg5} alt='' />
-                  <div>Bác sĩ Cột sống từ xa</div>
+                  <div>Tai Mũi Họng</div>
                 </div>
                 <div className="img-customize">
                   <img src={SpecialtyImg6} alt='' />
-                  <div>Bác sĩ Tiêu hóa từ xa</div>
+                  <div>Cột sống</div>
                 </div>
                 <div className="img-customize">
                   <img src={SpecialtyImg7} alt='' />
-                  <div>Bác sĩ Nội khoa từ xa</div>
-                </div>
-                <div className="img-customize">
-                  <img src={SpecialtyImg8} alt='' />
-                  <div>Bác sĩ Nam học từ xa</div>
+                  <div>Y học Cổ truyền</div>
                 </div>
               </Slider>
             </div>

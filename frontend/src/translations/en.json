@@ -1,7 +1,8 @@
 {
      "homeheader": {
         "speciality": "Medical speciality",
-        "health-facility": "Health facilities"
+        "health-facility": "Health facilities",
+        "doctor": "Doctor"
     },
     "common": {
         "add": "Add",

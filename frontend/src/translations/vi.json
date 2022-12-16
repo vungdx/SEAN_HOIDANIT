@@ -1,7 +1,8 @@
 {
     "homeheader": {
         "speciality": "Chuyên khoa",
-         "health-facility": "Cơ sở y tế"
+         "health-facility": "Cơ sở y tế",
+         "doctor": "Bác sỹ"
     },
     "common": {
         "add": "Thêm",

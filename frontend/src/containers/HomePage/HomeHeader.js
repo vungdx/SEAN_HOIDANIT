@@ -8,14 +8,12 @@ import { changeLanguageApp } from "../../store/actions/appActions";
 
 class HomeHeader extends Component {
   changeLanguage = (language) => {
-    console.log('nhận trong hàm gửi lên', language)
     this.props.changeLanguageAppRedux(language)
   }
 
 
   render() {
     const { language } = this.props
-    console.log("language trond dây", language)
     return (
       <Fragment>
         <div className="home-header-container">

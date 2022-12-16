@@ -1,5 +1,5 @@
 .section-specialty {
-  height: 330px;
+  height: 360px;
   background: #f5f5f5;
 
   .specialty-container {
@@ -37,7 +37,7 @@
 
     .specialty-body {
       .specialty-content {
-        height: 250px;
+        height: 330px;
 
         /* the parent */
         .slick-list {
@@ -53,7 +53,6 @@
         .img-customize {
           padding-left: 5px;
           padding-right: 5px;
-          border: 1px solid #eee;
           height: 250px;
         }
 

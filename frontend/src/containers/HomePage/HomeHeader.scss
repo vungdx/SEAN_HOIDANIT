@@ -74,7 +74,7 @@
         margin: 0 10px;
 
         &.active {
-          color: blue
+          color: orange
         }
       }
     }
@@ -122,6 +122,7 @@
       padding: 10px;
       border-radius: 25px;
       background: #f7d800;
+      font-size: 16px;
 
       i {
         margin: 0 6px;

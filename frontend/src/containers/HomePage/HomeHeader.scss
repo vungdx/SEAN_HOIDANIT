@@ -58,6 +58,7 @@
 
       .language-vi {
         cursor: pointer;
+        font-weight: 600;
 
         &.active {
           span {
@@ -69,6 +70,7 @@
 
       .language-en {
         cursor: pointer;
+        font-weight: 600;
         margin: 0 10px;
 
         &.active {
@@ -91,7 +93,6 @@
   flex-direction: column;
 
   .content-up {
-    border: 1px solid red;
     height: 50%;
 
     .title1 {
@@ -137,7 +138,6 @@
   }
 
   .content-down {
-    border: 1px solid green;
     height: 50%;
 
     .options {
@@ -147,7 +147,6 @@
       justify-content: center;
 
       .option-child {
-        border: 1px solid red;
         width: 100px;
 
         .icon-child {
@@ -157,6 +156,9 @@
           border-radius: 50%;
           text-align: center;
           margin: 0 auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           i {
             color: #49bce2;

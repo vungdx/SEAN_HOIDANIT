@@ -56,7 +56,7 @@ class HomeHeader extends Component {
             </div>
             <div className="right-content">
               <div className="support">
-                <i className="fas fa-question-circle"></i> Hỗ trợ
+                <i className="fas fa-question-circle"></i> &nbsp;Hỗ trợ
               </div>
               <div className={language === LANGUAGES.VI ? 'language-vi active': 'language-vi'}><span onClick={()=>this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
               <div className={language === LANGUAGES.EN ? 'language-en active': 'language-en'}><span onClick={()=>this.changeLanguage(LANGUAGES.EN)}>EN</span></div>

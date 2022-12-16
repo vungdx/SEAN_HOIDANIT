@@ -54,7 +54,7 @@ class HomeHeader extends Component {
             </div>
             <div className="right-content">
               <div className="support">
-                <i className="fas fa-question-circle"></i> &nbsp;Hỗ trợ
+                <i className="fas fa-question-circle"></i> &nbsp;<FormattedMessage id="homeheader.help" />
               </div>
               <div className={language === LANGUAGES.VI ? 'language-vi active': 'language-vi'}><span onClick={()=>this.changeLanguage(LANGUAGES.VI)}>VN</span></div>
               <div className={language === LANGUAGES.EN ? 'language-en active': 'language-en'}><span onClick={()=>this.changeLanguage(LANGUAGES.EN)}>EN</span></div>
@@ -63,7 +63,7 @@ class HomeHeader extends Component {
         </div>
         <div className="home-header-banner">
           <div className="content-up">
-            <div className="title1">NỀN TẢNG Y TÉ</div>
+            <div className="title1">NỀN TẢNG Y TẾ</div>
             <div className="title2">CHĂM SÓC SỨC KHỎE TOÀN DIỆN</div>
             <div className="search">
               <i className="fas fa-search"></i>

@@ -1,17 +1,90 @@
 .section-specialty {
   height: 330px;
-  background-color: #f5f5f5;
+  background: #f5f5f5;
   border: 1px solid red;
-}
 
-.slick-prev {
-  border: 1px solid green !important;
-  position: relative !important;
-  left: 0 !important;
-}
 
-.slick-next {
-  border: 1px solid red !important;
-  position: relative !important;
-  right: 0 !important;
+  .specialty-container {
+    margin: 0 50px;
+    display: flex;
+    flex-direction: column;
+
+    .specialty-header {
+      height: 60px;
+      margin-bottom: 30px;
+      padding-top: 30px;
+
+      .title-section {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .btn-section {
+        float: right;
+        padding: 12px 16px;
+        border: none;
+        outline: none;
+        display: block;
+        background: #ebebeb;
+        color: black;
+        cursor: pointer;
+        text-transform: uppercase;
+
+        &:hover {
+          color: #fff;
+          background: #f7d800;
+        }
+      }
+    }
+
+    .specialty-body {
+      .specialty-content {
+        height: 250px;
+
+        /* the parent */
+        .slick-list {
+          background: #fff;
+        }
+
+        /* the slides */
+        .slick-slide {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .img-customize {
+          padding-left: 5px;
+          padding-right: 5px;
+          border: 1px solid #eee;
+          height: 250px;
+        }
+
+        .slick-prev {
+          height: 45px !important;
+          width: 40px !important;
+          z-index: 10;
+          margin-left: 20px !important;
+          background: #45c3d2 !important;
+          opacity: 0.7;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+
+        .slick-next {
+          height: 45px !important;
+          width: 40px !important;
+          z-index: 10;
+          margin-right: 20px !important;
+          background: #45c3d2 !important;
+          opacity: 0.7;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
 }

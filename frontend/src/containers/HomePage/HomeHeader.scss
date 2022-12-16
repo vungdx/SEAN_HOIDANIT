@@ -60,15 +60,10 @@
         cursor: pointer;
 
         &.active {
-          color: orange
-        }
-      }
+          span {
+            color: orange
+          }
 
-      .language-vi {
-        cursor: pointer;
-
-        &.active {
-          color: orange
         }
       }
 

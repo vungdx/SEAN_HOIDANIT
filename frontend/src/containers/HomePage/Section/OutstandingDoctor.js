@@ -1,20 +1,20 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import "./MedicalFacility.scss";
+import "./OutstandingDoctor.scss";
 import { changeLanguageApp } from "../../../store/actions/appActions";
 //import css files
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MedicalFacilityImg1 from "../../../assets/images/image1.jpg";
-import MedicalFacilityImg2 from "../../../assets/images/image2.jpg";
-import MedicalFacilityImg3 from "../../../assets/images/image3.jpg";
-import MedicalFacilityImg4 from "../../../assets/images/image4.jpg";
-import MedicalFacilityImg5 from "../../../assets/images/image5.jpg";
-import MedicalFacilityImg6 from "../../../assets/images/image6.jpg";
-import MedicalFacilityImg7 from "../../../assets/images/image7.jpg";
-import MedicalFacilityImg8 from "../../../assets/images/image8.jpg";
-class MedicalFacility extends Component {
+import SpecialtyImg1 from "../../../assets/images/doctor1.jpg";
+import SpecialtyImg2 from "../../../assets/images/doctor2.jpg";
+import SpecialtyImg3 from "../../../assets/images/doctor3.jpg";
+import SpecialtyImg4 from "../../../assets/images/doctor4.jpg";
+import SpecialtyImg5 from "../../../assets/images/doctor5.jpg";
+import SpecialtyImg6 from "../../../assets/images/doctor6.jpg";
+import SpecialtyImg7 from "../../../assets/images/doctor7.jpg";
+import SpecialtyImg8 from "../../../assets/images/doctor8.jpg";
+class OutstandingDoctor extends Component {
   changeLanguage = (language) => {
     this.props.changeLanguageAppRedux(language);
   };
@@ -29,78 +29,88 @@ class MedicalFacility extends Component {
       slidesToScroll: 1,
     };
     return (
-      <div className="section-MedicalFacility">
-        <div className="MedicalFacility-container">
-          <div className="MedicalFacility-header">
-            <span className="title-section">Cơ sở y tế nổi bật</span>
+      <div className="section-outstanding-doctor">
+        <div className="outstanding-doctor-container">
+          <div className="outstanding-doctor-header">
+            <span className="title-section">Bác sỹ nổi bật tuần qua</span>
             <button className="btn-section">Xem thêm</button>
           </div>
-          <div className="MedicalFacility-body">
-            <div className="MedicalFacility-content">
+          <div className="outstanding-doctor-body">
+            <div className="outstanding-doctor-content">
               <Slider {...settings}>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg1}
+                    src={SpecialtyImg1}
                     alt=""
                   />
-                  <div>Bệnh viện Hữu nghị Việt Đức</div>
+                  <div>Bác sĩ Chuyên khoa II Trần Minh Khuyên</div>
+                  <div>Tư vấn, trị liệu Tâm lý</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg2}
+                    src={SpecialtyImg2}
                     alt=""
                   />
-                  <div>Bệnh viện Chợ Rẫy</div>
+                  <div>Phó Giáo sư, Tiến sĩ, Bác sĩ Nguyễn Thị Hoài An</div>
+                  <div>Tai Mũi Họng</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg3}
+                    src={SpecialtyImg3}
                     alt=""
                   />
-                  <div>Phòng khám Bệnh viện Đại học Y Dược 1</div>
+                  <div>
+                    Phó Giáo sư, Tiến sĩ, Bác sĩ cao cấp Nguyễn Duy Hưng
+                  </div>
+                  <div>Da liễu</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg4}
+                    src={SpecialtyImg4}
                     alt=""
                   />
-                  <div>Bệnh viện K - Cơ sở Phan Chu Trinh</div>
+                  <div>Bác sĩ Chuyên khoa I Phí Thị Tuyết Nga</div>
+                  <div>Sản Phụ khoa</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg5}
+                    src={SpecialtyImg5}
                     alt=""
                   />
-                  <div>Bệnh viện Ung bướu Hưng Việt</div>
+                  <div>Bác sĩ Chuyên khoa II La Thị Kim Liên</div>
+                  <div>Tai Mũi Họng</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg6}
+                    src={SpecialtyImg6}
                     alt=""
                   />
-                  <div>Hệ thống y tế MEDLATEC</div>
+                  <div>Phó Giáo sư, Tiến sĩ, Bác sĩ Lê Thị Tuyết Lan</div>
+                  <div>Dị ứng miễn dịch</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg7}
+                    src={SpecialtyImg7}
                     alt=""
                   />
-                  <div>Trung tâm xét nghiệm Diag Laboratories</div>
+                  <div>Tiến sĩ, Bác sĩ Phạm Chí Lăng</div>
+                  <div>Cơ Xương Khớp</div>
                 </div>
                 <div className="img-customize">
                   <img
                     className="img-customize-width"
-                    src={MedicalFacilityImg8}
+                    src={SpecialtyImg8}
                     alt=""
                   />
-                  <div>Hệ thống Y tế Thu Cúc TCI</div>
+                  <div>Tiến sĩ, Bác sĩ Vũ Thái Hà</div>
+                  <div>Da liễu</div>
                 </div>
               </Slider>
             </div>
@@ -124,4 +134,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);
+export default connect(mapStateToProps, mapDispatchToProps)(OutstandingDoctor);

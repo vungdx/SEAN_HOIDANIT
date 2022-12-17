@@ -1,13 +1,13 @@
-.section-MedicalFacility {
+.section-outstanding-doctor {
     height: 360px;
     background: #f5f5f5;
 
-    .MedicalFacility-container {
+    .outstanding-doctor-container {
         margin: 0 50px;
         display: flex;
         flex-direction: column;
 
-        .MedicalFacility-header {
+        .outstanding-doctor-header {
             height: 60px;
             margin-bottom: 30px;
             padding-top: 30px;
@@ -35,8 +35,8 @@
             }
         }
 
-        .MedicalFacility-body {
-            .MedicalFacility-content {
+        .outstanding-doctor-body {
+            .outstanding-doctor-content {
                 height: 330px;
 
                 /* the parent */
@@ -53,10 +53,11 @@
                 .img-customize {
                     padding-left: 5px;
                     padding-right: 5px;
-                    height: 150px;
+                    height: 250px;
 
                     &-width {
-                        width: 100% !important;
+                        border-radius: 50%;
+                        width: 100px;
                     }
                 }
 

@@ -70,7 +70,7 @@ const checkUserEmail = (userEmail) => {
 const getAllUsers = (userId) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const users = "";
+      let users = "";
       if (userId === "ALL") {
         users = await db.User.findAll({
           attributes: { exclude: ["password"] },
@@ -84,12 +84,12 @@ const getAllUsers = (userId) => {
       }
       resolve(users);
     } catch (error) {
-      reject(e);
+      reject(error);
     }
   });
 };
 
-const getAllCodeService = (typeInput) => {
+const getAllCode = (typeInput) => {
   return new Promise(async (resolve, reject) => {
     try {
       if (!typeInput) {
@@ -204,7 +204,7 @@ const updateUser = (data) => {
 module.exports = {
   handleUserLogin,
   getAllUsers,
-  getAllCodeService,
+  getAllCode,
   createNewUser,
   deleteUser,
   updateUser,

@@ -1,6 +1,7 @@
 import db from "../models/index";
 
 const getTopDoctorHome = (limitInput) => {
+  console.log("limir", limitInput);
   return new Promise(async (resolve, reject) => {
     try {
       const doctors = await db.User.findAll({

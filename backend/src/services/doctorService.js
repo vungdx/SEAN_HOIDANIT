@@ -99,7 +99,7 @@ const getDetailDoctorById = (idInput) => {
           },
           include: [
             {
-              mode: db.Markdown,
+              model: db.Markdown,
               attributes: ["description", "contentHTML", "contentMarkdown"],
             },
             {
@@ -117,7 +117,7 @@ const getDetailDoctorById = (idInput) => {
         });
       }
     } catch (error) {
-      reject(e);
+      reject(error);
     }
   });
 };

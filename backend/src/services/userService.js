@@ -20,7 +20,7 @@ const handleUserLogin = (email, password) => {
       const isExist = await checkUserEmail(email);
       if (isExist) {
         const user = await db.User.findOne({
-          attributes: ["email", "roleId", "password"],
+          attributes: ["email", "roleId", "password", "firstName", "lastName"],
           where: { email: email },
           raw: true,
         });
@@ -70,7 +70,7 @@ const checkUserEmail = (userEmail) => {
 const getAllUsers = (userId) => {
   return new Promise(async (resolve, reject) => {
     try {
-      const users = "";
+      let users = "";
       if (userId === "ALL") {
         users = await db.User.findAll({
           attributes: { exclude: ["password"] },
@@ -84,12 +84,12 @@ const getAllUsers = (userId) => {
       }
       resolve(users);
     } catch (error) {
-      reject(e);
+      reject(error);
     }
   });
 };
 
-const getAllCodeService = (typeInput) => {
+const getAllCode = (typeInput) => {
   return new Promise(async (resolve, reject) => {
     try {
       if (!typeInput) {
@@ -101,6 +101,7 @@ const getAllCodeService = (typeInput) => {
         const res = {};
         const allCode = await db.Allcode.findAll({
           where: { type: typeInput },
+          raw: true,
         });
         res.errCode = 0;
         res.data = allCode;
@@ -205,7 +206,7 @@ const updateUser = (data) => {
 module.exports = {
   handleUserLogin,
   getAllUsers,
-  getAllCodeService,
+  getAllCode,
   createNewUser,
   deleteUser,
   updateUser,

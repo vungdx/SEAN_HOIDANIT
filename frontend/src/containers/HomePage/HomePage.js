@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import HomeHeader from './HomeHeader'
+import HomeHeader from "./HomeHeader";
 import MedicalFacility from "./Section/MedicalFacility";
+import OutstandingDoctor from "./Section/OutstandingDoctor";
 import Specialty from "./Section/Specialty";
-import './HomePage.scss'
 
 class HomePage extends Component {
   render() {
@@ -12,6 +12,7 @@ class HomePage extends Component {
         <HomeHeader />
         <Specialty />
         <MedicalFacility />
+        <OutstandingDoctor />
       </div>
     );
   }

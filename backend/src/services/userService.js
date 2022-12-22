@@ -201,6 +201,7 @@ const updateUser = (data) => {
   });
 };
 
+
 module.exports = {
   handleUserLogin,
   getAllUsers,

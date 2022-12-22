@@ -121,9 +121,26 @@ const getDetailDoctorById = (idInput) => {
   });
 };
 
+const bulkCreateSchedule = (data) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const schedule = data.arrSchedule;
+      if (!data.arrSchedule) {
+        resolve({
+          errCode: 1,
+          errMessage:' Missing required parameters'
+        })
+      }
+    } catch (error) {
+      
+    }
+  })
+}
+
 module.exports = {
   getTopDoctorHome,
   getAllDoctors,
   saveDetailInforDoctor,
   getDetailDoctorById,
+  bulkCreateSchedule
 };

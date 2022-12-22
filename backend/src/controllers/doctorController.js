@@ -50,9 +50,21 @@ const getDetailDoctorById = async (req, res) => {
   }
 };
 
+const bulkCreateSchedule = async (req, res)=>{
+  try {
+    const infor = await doctorService.bulkCreateSchedule(req.body);
+    return res.status(200).json({
+      infor
+    })
+  } catch (error) {
+    
+  }
+}
+
 module.exports = {
   getTopDoctorHome,
   getAllDoctors,
   postInforDoctor,
   getDetailDoctorById,
+  bulkCreateSchedule
 };

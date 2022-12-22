@@ -1,7 +1,10 @@
 import db from "../models/index";
+require("dotenv").config();
+import _ from 'lodash'
+
+const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE
 
 const getTopDoctorHome = (limitInput) => {
-  console.log("limir", limitInput);
   return new Promise(async (resolve, reject) => {
     try {
       const doctors = await db.User.findAll({
@@ -147,7 +150,20 @@ const bulkCreateSchedule = (data) => {
       if (!data.arrSchedule) {
         resolve({
           errCode: 1,
-          errMessage:' Missing required parameters'
+          errMessage: ' Missing required parameters'
+        })
+      } else {
+        if (schedule && schedule.length>0) {
+          schedule = schedule.map(item => {
+            item.maxNumber = MAX_NUMBER_SCHEDULE
+            return item
+          })
+        }
+        console.log("đặt log ở đây", schedule)
+        await db.Schedule.bulkCreate(schedule)
+        resolve({
+          errCode: 0,
+          errMessage: 'Successfully'
         })
       }
     } catch (error) {
